@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --linear-colored: linear-gradient(45deg, #F51F3C, #89FFE9);
+    --linear-gray-colored: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    --text-main-color: #F51F3C;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--linear-colored);
+}
+/*textos*/
+h1, h2, p, h3{
+    color: var(--text-main-color);
+    font-weight: 600;
+    font-size: 3rem;
+}
+h1, h2, p, h3{
+    opacity: 0.8;
+}
+h2,p{
+    font-weight: 500;  
+    opacity: 0.8;
+    font-size: 1.2rem;
+}
+h3{
+   font-weight: 400; 
+   font-size: 1rem;
+}
+
+/*circle*/
+.circle1, .circle2{
+    background: var(--linear-gray-colored);
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    position: absolute;
+}
+.circle1{
+    top: 5%;
+    left: 10%;
+}
+.circle2{
+    bottom: 5%;
+    right: 10%;
+}
+/*glass dashboard*/
+.glass{
+    min-height: 80vh;
+    width: 50%;
+    min-width: 40%;
+    background: var(--linear-gray-colored);
+    border-radius: 30px;
+    margin: 20px;
+    overflow: hidden;
+    display: flex;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+}
+/*dashboard*/
+.dashboard{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background: var(--linear-gray-colored);
+    border-radius: 2rem;
+    padding: 20px;
+}
+.user img{
+    width: 100px;
+    border-radius: 50%;
+}
+.link{
+    flex: 2;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+.link h2{
+    padding: 0 2rem;
+}
+.link img{
+    width: 40px;
+}
+.pro-section{
+    background: #F51F3C;
+    border-radius: 30px;
+    color: white;
+    padding: 16px;
+    width: 15vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pro-section img{
+    width: 50px;
+    transform: rotate(-20deg);
+}
+.pro-section h2{
+    width: 60%;
+    color: white;
+    font-weight: 600;
+}
+/*games*/
+.games{
+    flex: 2;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.status h1{
+    font-size: 40px;
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+.card{
+    display: flex;
+    background: var(--linear-gray-colored);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 30px 0;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+    justify-content: space-between;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.card img{
+    width: 100px;
+    border-radius: 10px;
+}
+.percentage{
+    align-self: center;
+    font-weight: bold;
+    color: var(--text-main-color);
+}
+.card-info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+    margin: 0 20px;
+}
+.card-info .titles h2{
+    font-size: 22px;
+    font-weight: 700;
+}
+.card-info .titles p{
+    font-size: 16px;
+    font-weight: 400;
+}
+.progress-bar{
+    background: var(--linear-colored);
+    width: 100%;
+    height: 25%;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+.progress-bar::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    left: 60%;
+}
+.progress-bar.p80::after{
+    left: 80%;
+}
+.progress-bar.p100::after{
+    left: 100%;
+}
+.progress-bar.p80::after{
+    left: 80%;
+}
+
+@media(max-width:792px){
+    .glass{
+        width: 100%;
+    }
+    .dashboard{
+        padding: 10px;
+    }
+    .link h2{
+        display: none;
+    }
+    .link img{
+        width: 30px;
+    }
+    .pro-section{
+        display: none;
+    }
+    .games{
+        flex: 1;
+    }
+    .card{
+        margin: 20px 0;
+        width: 90%;
+        height: 60%;
+        margin-left: 0.5rem;
+    }
+    .card img{
+        width: 40px;
+    }
+    .card-info{
+        margin: 0 10px;
+    }
+    .card-info .titles h2{
+        display: none;
+    }
+    .card-info .titles p{
+        display: none;
+    }
+    .progress-bar{
+        display: none;
+    }
+    .percentage{
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+}
